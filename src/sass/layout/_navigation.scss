@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as c;
+
+.nav {
+	background-color: c.$color-primary;
+	height: 7rem;
+	width: 100%;
+	display: flex;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		a {
+			font-size: 3rem;
+			font-weight: 400;
+			text-decoration: none;
+			color: c.$color-secondary;
+		}
+		img {
+			margin-right: 0.5rem;
+			height: 4rem;
+		}
+	}
+	&__menu {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		height: 100%;
+		width: 50%;
+
+		&-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			list-style: none;
+			height: 100%;
+			width: 25%;
+			transition: background-color 0.3s, color 0.3s;
+			a {
+				font-size: 1.4rem;
+				text-decoration: none;
+				color: c.$color-secondary;
+				padding: 3rem 2rem;
+			}
+
+			&:hover {
+				background-color: c.$color-secondary;
+				a {
+					color: c.$color-primary;
+				}
+			}
+		}
+		&-item:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.nav-body {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.wrapper .nav-wrapper {
+	height: 100%;
+}

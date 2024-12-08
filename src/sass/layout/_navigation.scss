@@ -7,10 +7,12 @@
 	height: 7rem;
 	width: 100%;
 	display: none;
+	z-index: 100;
 
 	&__logo {
 		display: flex;
 		align-items: center;
+		margin-left: 2rem;
 		a {
 			font-size: 3rem;
 			font-weight: 400;
@@ -28,6 +30,7 @@
 		justify-content: flex-end;
 		height: 100%;
 		width: 50%;
+		margin-right: 2rem;
 
 		&-item {
 			display: flex;
@@ -228,5 +231,16 @@
 	}
 	.hamburger {
 		display: none;
+	}
+}
+
+@media (width > 1200px) {
+	.nav-desktop {
+		&__logo {
+			margin-left: 0;
+		}
+		&__menu {
+			margin-right: 0;
+		}
 	}
 }

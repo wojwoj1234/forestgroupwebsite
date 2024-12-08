@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as c;
+
+
+body{
+    background-color: c.$color-primary;
+    overflow: hidden;
+}

@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as c;
 
+// Desktop Navigation
 .nav-desktop {
+	position: fixed;
 	background-color: c.$color-primary;
 	height: 7rem;
 	width: 100%;
@@ -62,15 +64,169 @@
 	justify-content: space-between;
 }
 
-.wrapper .nav-wrapper {
+.wrapper.nav-wrapper {
 	height: 100%;
 }
 
+// Mobile Navigation
 
+.nav-mobile {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: c.$mobile-nav-bg;
+	backdrop-filter: blur(6px);
+	z-index: 5;
+	display: none;
+	transition: transform 0.7s ease-in-out;
 
+	&--active {
+		display: flex;
+		transform: translateX(0);
+	}
 
-@media(width > 992px) {
+	&--inactive {
+		transform: translateX(-100%);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 80%;
+		width: 100%;
+		margin-top: 15%;
+		// margin-left: 5%;
+	}
+
+	&__menu-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		color: c.$color-secondary;
+		font-size: 1.5rem;
+		padding: 2rem;
+		border-bottom: 1px solid black;
+	}
+	&__menu-item:last-child {
+		border-bottom: none;
+	}
+
+	&__menu-link {
+		list-style: none;
+		text-decoration: none;
+		color: c.$color-secondary;
+		padding: 1rem;
+	}
+
+	&__menu-icon {
+		height: 2rem;
+	}
+
+	&__menu-logo {
+		display: flex;
+		align-items: center;
+		margin-left: 5%;
+		margin-bottom: 5%;
+
+		img {
+			height: 3rem;
+		}
+		a {
+			font-size: 3rem;
+			text-decoration: none;
+			color: c.$color-secondary;
+		}
+	}
+
+	&__menu-close {
+		width: 70%;
+		height: 15%;
+
+		&-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 50%;
+			padding: 3rem;
+			// margin-bottom: 10%;
+			border-radius: 3rem;
+			border: none;
+			font-size: 2rem;
+			// background-color: c.$color-secondary;
+			// color: c.$color-primary;
+		}
+	}
+}
+
+.nav-mobile--active {
+	display: flex;
+	animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+.nav-mobile--inactive {
+	animation: slideOutToLeft 0.5s ease-in-out;
+}
+
+//hamburger menu
+
+.hamburger {
+	position: fixed;
+	top: 20px;
+	right: 5%;
+	z-index: 100;
+
+	&-btn {
+		padding: 1rem;
+		background: none;
+		border: none;
+		&__icon {
+			height: 4rem;
+		}
+	}
+}
+
+//animations
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideOutToLeft {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+//Breakpoints
+
+@media (width > 992px) {
 	.nav-desktop {
 		display: flex;
+	}
+	.nav-mobile {
+		display: none;
+	}
+	.hamburger {
+		display: none;
 	}
 }

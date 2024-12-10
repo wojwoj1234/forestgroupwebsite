@@ -39,7 +39,7 @@
 			list-style: none;
 			height: 100%;
 			width: 25%;
-			transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.3s, color 0.3s, transform 0.3s;
 			a {
 				font-size: 1.4rem;
 				text-decoration: none;
@@ -56,6 +56,10 @@
 		}
 		&-item:last-child {
 			margin-right: 0;
+		}
+		&-item.active {
+			transform: scale(1.1);
+			font-weight: bold;
 		}
 	}
 }
@@ -189,6 +193,7 @@
 	top: 20px;
 	right: 5%;
 	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.3);
 
 	&-btn {
 		padding: 1rem;

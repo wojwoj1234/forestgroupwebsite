@@ -2,6 +2,7 @@ const hamburgerBtn = document.querySelector('.hamburger-btn')
 const hamburgerIcon = document.querySelector('.hamburger-btn__icon')
 const mobileNav = document.querySelector('.nav-mobile')
 const mobileNavLinks = document.querySelectorAll('.nav-mobile__menu-link')
+const footerYear = document.querySelector('.current-year')
 
 const handleMobileNav = () => {
 	if (mobileNav.classList.contains('nav-mobile--active')) {
@@ -29,4 +30,10 @@ const handleMobileNav = () => {
 	}
 }
 
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
+handleCurrentYear()
 hamburgerBtn.addEventListener('click', handleMobileNav)

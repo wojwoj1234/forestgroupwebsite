@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as c;
+.footer {
+	background-color: c.$footer-bg-color;
+	&__body {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin: 0 3rem;
+		padding: 3rem 0;
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2rem;
+		&-img {
+			width: 4rem;
+		}
+		&-text {
+			font-size: 3rem;
+			text-decoration: none;
+			color: c.$color-secondary;
+		}
+	}
+
+	&__links-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&__links {
+		height: 100px;
+		margin-bottom: 4rem;
+	}
+	&__links:last-child {
+		margin-bottom: 0;
+	}
+	&__link-title {
+		font-weight: bold;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	&__link-item {
+		margin-bottom: 1.3rem;
+	}
+
+	&__link-item:last-child {
+		margin-bottom: 0;
+	}
+	&__link {
+		font-weight: 300;
+		text-decoration: none;
+		color: c.$color-secondary;
+		font-size: 1.2rem;
+	}
+	&__bottom {
+		margin-top: 2rem;
+		border-top: 1px solid c.$color-secondary;
+	}
+
+	&__company-name {
+		padding: 2rem 0;
+		text-align: center;
+		font-size: 1rem;
+		font-weight: 300;
+	}
+}
+@media (width > 992px) {
+	.footer {
+		&__body {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+		&__logo {
+			margin-bottom: 0;
+		}
+		&__links-box {
+			flex-direction: row;
+			text-align: left;
+		}
+		&__links {
+			margin-left: 7rem;
+			margin-bottom: 0;
+		}
+	}
+}

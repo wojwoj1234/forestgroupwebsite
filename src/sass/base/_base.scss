@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as c;
 
-
-body{
-    background-color: c.$color-primary;
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: c.$color-primary;
 }

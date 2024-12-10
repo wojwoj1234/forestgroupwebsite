@@ -6,7 +6,7 @@
 
 	.hero-content {
 		position: absolute;
-		top: 40%;
+		top: 50%;
 		width: 100%;
 		text-align: center;
 		transform: translateY(-50%);
@@ -103,8 +103,7 @@
 }
 
 .offers {
-	scroll-margin-top: 7rem;
-	height: 800px;
+	height: 2000px;
 	.section-subtitle {
 		text-align: center;
 		font-size: 1.8rem;
@@ -125,8 +124,9 @@
 		align-items: center;
 		flex-direction: column;
 		height: 500px;
-		width: 60%;
-		margin: 3rem;
+		margin: 3rem 0;
+		width: 80%;
+
 		box-shadow: -1px 2px 14px 20px rgba(0, 0, 0, 0.1);
 	}
 	&__title {
@@ -183,6 +183,7 @@
 	.main-hero {
 		.hero-content {
 			margin-top: 2.5rem;
+			top: 40%;
 
 			.hero-title {
 				font-size: 2rem;
@@ -202,6 +203,12 @@
 	.adventure.hero {
 		.hero-title {
 			padding: 3rem 6rem;
+		}
+	}
+	.offers {
+		&__item {
+			width: 60%;
+			margin: 3rem;
 		}
 	}
 }
@@ -276,6 +283,8 @@
 	}
 
 	.offers {
+		scroll-margin-top: 7rem;
+		height: 800px;
 		&__body {
 			flex-direction: row;
 		}

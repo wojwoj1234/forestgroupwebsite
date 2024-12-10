@@ -1,164 +1,201 @@
 @use '../abstracts/variables' as c;
 
 .main-hero {
-    overflow: hidden;
-    height: 70dvh;
+	overflow: hidden;
+	height: 70dvh;
 
-    .hero-content {
-        position: absolute;
-        top: 55%;
-        width: 100%;
-        text-align: center;
-        transform: translateY(-50%);
-        z-index: 11;
+	.hero-content {
+		position: absolute;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+		transform: translateY(-50%);
+		z-index: 11;
 
-        .hero-title {
-            color: c.$color-primary;
-            font-size: 1.4rem;
-            font-weight: 100;
-            margin-bottom: 1rem;
-        }
+		.hero-title {
+			color: c.$color-primary;
+			font-size: 1.4rem;
+			font-weight: 100;
+			margin-bottom: 1rem;
+		}
 
-        .hero-subtitle {
-            color: c.$color-primary;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-    }
+		.hero-subtitle {
+			color: c.$color-primary;
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
 
-    .hero-img {
-        width: 100%;
-        background: url('../img/jungle-mobile.jpg') no-repeat center center/cover;
-    }
+	.hero-img {
+		width: 100%;
+		background: url('../img/jungle-mobile.jpg') no-repeat center center/cover;
+	}
 }
 
 .about-us {
-    // overflow: hidden;
+    width: 100%;
+    height: 80dvh;
+	// overflow: hidden;
 
-    &__body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        margin-top: 1rem;
-    }
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		margin-top: 1rem;
+	}
 
-    &__img {
-        width: 90%;
-        max-width: 1200px;
-        height: auto;
-        margin-top: 3rem;
+	&__img {
+		width: 90%;
+		max-width: 1200px;
+		height: auto;
+		margin-top: 3rem;
 
-        img {
-            width: 100%;
-        }
-    }
+		img {
+			width: 100%;
+		}
+	}
 
-    &__content {
-        margin-top: 2rem;
-        width: 80%;
+	&__content {
+		margin-top: 2rem;
+		width: 80%;
+		text-align: center;
+
+		&-title {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: c.$color-secondary;
+			margin-bottom: 1rem;
+		}
+
+		&-text {
+			font-size: 1rem;
+			font-weight: 300;
+			color: c.$color-secondary;
+			line-height: 1.8;
+		}
+	}
+}
+
+.adventure.hero {
+    position: relative;
+    height: 40dvh;
+	.hero-img {
+		background: url('../img/girl-walking-mobile.jpg') no-repeat center center/cover;
+	}
+
+    .hero-title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        padding: 2rem 4rem;
+        font-weight: 400;
+        color: c.$color-primary;
+        z-index: 21;
+        border: 1px solid c.$color-primary;
         text-align: center;
-
-        &-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: c.$color-secondary;
-            margin-bottom: 1rem;
-        }
-
-        &-text {
-            font-size: 1rem;
-            font-weight: 300;
-            color: c.$color-secondary;
-            line-height: 1.8;
-        }
     }
 }
 
 // breakpoints
 @media (width > 576px) {
-    .main-hero {
-        .hero-content {
-            margin-top: 2.5rem;
+	.main-hero {
+		.hero-content {
+			margin-top: 2.5rem;
 
-            .hero-title {
-                font-size: 2rem;
-                margin-bottom: 0.5rem;
-            }
+			.hero-title {
+				font-size: 2rem;
+				margin-bottom: 0.5rem;
+			}
 
-            .hero-subtitle {
-                font-size: 3rem;
-            }
+			.hero-subtitle {
+				font-size: 3rem;
+			}
+		}
+	}
+
+    .about-us{
+        height: 90dvh;
+    }
+
+    .adventure.hero{
+        .hero-title{
+            padding: 3rem 6rem;
         }
     }
 }
 
 @media (width > 768px) {
-    .about-us {
-        &__content {
-            &-title {
-                font-size: 1.8rem;
-            }
+	.about-us {
+        height: 105dvh;
+		&__content {
+			&-title {
+				font-size: 1.8rem;
+			}
 
-            &-text {
-                font-size: 1.2rem;
-            }
-        }
-    }
+			&-text {
+				font-size: 1.2rem;
+			}
+		}
+	}
 }
 
 @media (width > 992px) {
-    .main-hero {
-        .hero-content {
-            text-align: left;
-            margin-left: 2em;
-        }
+	.main-hero {
+		.hero-content {
+			top: 55%;
+			text-align: left;
+			margin-left: 2em;
+		}
 
-        .hero-img {
-            background: url('../img/jungle-desktop.jpg') no-repeat center center/cover;
-        }
-    }
+		.hero-img {
+			background: url('../img/jungle-desktop.jpg') no-repeat center center/cover;
+		}
+	}
 
-    .about-us {
-        &__body {
-            align-items: flex-start;
-            flex-direction: row;
-            margin-top: 4rem;
-        }
+	.about-us {
+        height: 60dvh;
+		&__body {
+			align-items: flex-start;
+			flex-direction: row;
+			margin-top: 4rem;
+		}
 
-        &__img {
-            margin-top: 0;
-            margin-left: 1.5rem;
-            width: 45%;
+		&__img {
+			margin-top: 0;
+			margin-left: 1.5rem;
+			width: 45%;
 
-            img {
-                width: 100%;
-            }
-        }
+			img {
+				width: 100%;
+			}
+		}
 
-        &__content {
-            margin-right: 1.5rem;
-            margin-top: 0;
-            width: 55%;
-            margin-left: 3rem;
-            text-align: left;
+		&__content {
+			margin-right: 1.5rem;
+			margin-top: 0;
+			width: 55%;
+			margin-left: 3rem;
+			text-align: left;
 
-            &-title {
-                font-size: 2.5rem;
-            }
+			&-title {
+				font-size: 2.5rem;
+			}
 
-            &-text {
-                font-size: 1.3rem;
-            }
-        }
-    }
+			&-text {
+				font-size: 1.3rem;
+			}
+		}
+	}
 }
 
 @media (width > 1200px) {
-    .main-hero {
-        .hero-content {
-            margin-left: 0;
-        }
-    }
+	.main-hero {
+		.hero-content {
+			margin-left: 1rem;
+		}
+	}
 }

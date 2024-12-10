@@ -15,10 +15,7 @@
 
 <body>
 
-    
-
-
-<div class="hamburger">
+    <div class="hamburger">
     <button class="hamburger-btn">
         <img src="./dist/img/icons/menu.svg" alt="Ikona do nawigacji" class="hamburger-btn__icon">
     </button>
@@ -42,7 +39,7 @@
                     <a href="#aboutus" class="nav-desktop__menu-link">O nas</a>
                 </li>
                 <li class="nav-desktop__menu-item">
-                    <a href="#offer" class="nav-desktop__menu-link">Oferta</a>
+                    <a href="#offers" class="nav-desktop__menu-link">Oferta</a>
                 </li>
                 <li class="nav-desktop__menu-item">
                     <a href="contact.html" class="nav-desktop__menu-link">Kontakt</a>
@@ -54,7 +51,7 @@
 
 <nav class="nav-mobile">
     <div class="nav-mobile__body">
-        
+
         <ul class="nav-mobile__menu">
             <li class="nav-mobile__menu-item">
                 <img src="./dist/img/icons/home.svg" class="nav-mobile__menu-icon"> <a href="#home"
@@ -65,18 +62,18 @@
                     class="nav-mobile__menu-link">O nas</a>
             </li>
             <li class="nav-mobile__menu-item">
-                <img src="./dist/img/icons/offers.svg" class="nav-mobile__menu-icon"> <a href="#offer"
+                <img src="./dist/img/icons/offers.svg" class="nav-mobile__menu-icon"> <a href="#offers"
                     class="nav-mobile__menu-link">Oferta</a>
             </li>
             <li class="nav-mobile__menu-item">
                 <img src="./dist/img/icons/contact.svg" class="nav-mobile__menu-icon"> <a href="contact.html"
                     class="nav-mobile__menu-link">Kontakt</a>
             </li>
-           
+
         </ul>
     </div>
 </nav>
-    <header class="hero main-hero">
+    <header class="hero main-hero" id="home">
         <div class="wrapper">
             <div class="hero-content">
                 <h1 class="hero-title">Forest Group</h1>
@@ -85,7 +82,7 @@
             <div class="hero-img"></div>
     </header>
     <main>
-        <section class="about-us white-section">
+        <section class="about-us white-section" id="aboutus">
             <div class="wrapper">
                 <h2 class="section-title">O nas</h2>
                 <div class="about-us__body">
@@ -109,6 +106,55 @@
                     <h1 class="hero-title">Przygoda dla całej rodziny</h1>
                 </div>
                 <div class="hero-img"></div>
+            </div>
+        </section>
+
+
+        <section class="offers" id="offers">
+            <div class="wrapper">
+                <h2 class="section-title">Oferta</h2>
+                <p class="section-subtitle">Wybierz jedną z naszych wspaniałych ofert!</p>
+                <div class="offers__body">
+                    <div class="offers__item">
+                        <h3 class="offers__title">Demo</h3>
+                        <p class="offers__price">0$</p>
+                        <ul class="offers__list">
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                            <li class="not-included offers__list-item"><img src="./dist/img/icons/minus.svg" alt=""> opcja poza pakietem</li>
+                            <li class="not-included offers__list-item"><img src="./dist/img/icons/minus.svg" alt=""> opcja poza pakietem</li>
+                            <li class="not-included offers__list-item"><img src="./dist/img/icons/minus.svg" alt=""> opcja poza pakietem</li>
+                        </ul>
+                        <button class="offers__btn">Wybierz</button>
+                    </div>
+                    <div class="offers__item">
+                        <h3 class="offers__title">Standard</h3>
+                        <p class="offers__price">99$</p>
+                        <ul class="offers__list">
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w
+                                pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w
+                                pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w
+                                pakiecie</li>
+                            <li class="not-included offers__list-item"><img src="./dist/img/icons/minus.svg" alt=""> opcja poza pakietem</li>
+                            <li class="not-included offers__list-item"><img src="./dist/img/icons/minus.svg" alt=""> opcja poza pakietem</li>
+                        </ul>
+                        <button class="offers__btn offers__btn--green">Wybierz</button>
+                    </div>
+                    <div class="offers__item">
+                        <h3 class="offers__title">Premium</h3>
+                        <p class="offers__price">299$</p>
+                        <ul class="offers__list">
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                            <li class="included offers__list-item"><img src="./dist/img/icons/check.svg" alt=""> opcja w pakiecie</li>
+                        </ul>
+                        <button class="offers__btn">Wybierz</button>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -33,8 +33,9 @@
 }
 
 .about-us {
+	scroll-margin-top: 7rem;
 	width: 100%;
-	height: 80dvh;
+	height: 800px;
 	// overflow: hidden;
 
 	&__body {
@@ -81,6 +82,7 @@
 .adventure.hero {
 	position: relative;
 	height: 40dvh;
+	max-height: 600px;
 	.hero-img {
 		background: url('../img/girl-walking-mobile.jpg') no-repeat center center/cover;
 	}
@@ -97,6 +99,82 @@
 		z-index: 21;
 		border: 1px solid c.$color-primary;
 		text-align: center;
+	}
+}
+
+.offers {
+	scroll-margin-top: 7rem;
+	height: 800px;
+	.section-subtitle {
+		text-align: center;
+		font-size: 1.8rem;
+		margin-top: 4rem;
+		margin-bottom: 1rem;
+	}
+	&__body {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		height: 500px;
+		width: 60%;
+		margin: 3rem;
+		box-shadow: -1px 2px 14px 20px rgba(0, 0, 0, 0.1);
+	}
+	&__title {
+		font-size: 1.8rem;
+		margin-bottom: 1.5rem;
+		margin-top: 2rem;
+	}
+	&__price {
+		font-size: 2.6rem;
+		font-weight: bold;
+		margin-bottom: 2rem;
+	}
+
+	&__list {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		img {
+			vertical-align: top;
+		}
+		&-item {
+			margin-bottom: 0.4rem;
+		}
+		&-item:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.not-included {
+		color: c.$grey-text-color;
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 10%;
+		width: 70%;
+		font-size: 1.2rem;
+		padding: 0.5rem 1rem;
+		border: none;
+		border-radius: 8px;
+		box-shadow: 1px 7px 10px 7px rgba(0, 0, 0, 0.1);
+		background-color: c.$color-primary;
+		color: c.$color-secondary;
+		cursor: pointer;
+
+		&--green {
+			background-color: c.$green-btn;
+			box-shadow: 1px 7px 10px 7px rgba(9, 255, 0, 0.1);
+		}
 	}
 }
 
@@ -118,7 +196,7 @@
 	}
 
 	.about-us {
-		height: 90dvh;
+		height: 900px;
 	}
 
 	.adventure.hero {
@@ -130,7 +208,7 @@
 
 @media (width > 768px) {
 	.about-us {
-		height: 105dvh;
+		height: 1000px;
 		&__content {
 			&-title {
 				font-size: 1.8rem;
@@ -145,6 +223,7 @@
 
 @media (width > 992px) {
 	.main-hero {
+		max-height: 1000px;
 		.hero-content {
 			top: 55%;
 			text-align: left;
@@ -157,7 +236,7 @@
 	}
 
 	.about-us {
-		height: 60dvh;
+		height: 600px;
 		&__body {
 			align-items: flex-start;
 			flex-direction: row;
@@ -193,6 +272,16 @@
 	.adventure.hero {
 		.hero-img {
 			background: url('../img/girl-walking-desktop.jpg') no-repeat center center/cover;
+		}
+	}
+
+	.offers {
+		&__body {
+			flex-direction: row;
+		}
+
+		&__item {
+			width: 30%;
 		}
 	}
 }

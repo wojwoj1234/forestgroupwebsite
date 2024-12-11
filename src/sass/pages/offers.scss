@@ -1,0 +1,31 @@
+.offers-site {
+	position: relative;
+
+	height: 2000px;
+	.section-title {
+		position: relative;
+		top: 0;
+	}
+	.offers__body {
+		height: 100%;
+
+		.individual-desc {
+			margin: 0 1.5rem;
+			text-align: center;
+			font-size: 1.4rem;
+			font-weight: 300;
+			line-height: 2rem;
+		}
+	}
+}
+
+@media (width>992px) {
+	.offers-site {
+		top: 7rem;
+		height: 1000px;
+        .offers__body {
+            height: 800px;
+        }
+	}
+	
+}

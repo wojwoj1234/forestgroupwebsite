@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="./dist/css/style.min.css">
 
 </head>
@@ -25,12 +26,12 @@
 <nav class="nav-desktop">
     <div class="wrapper nav-wrapper">
         <div class="nav-body">
-            <div class="nav-desktop__logo">
+            <div class="nav-desktop__logo" data-aos="fade-right" data-aos-duration="1000">
                 <img src="./dist/img/icons/christmas-tree.svg" alt=""> <a href="index.html">
                     Forest
                 </a>
             </div>
-            <ul class="nav-desktop__menu">
+            <ul class="nav-desktop__menu" data-aos="fade-right" data-aos-duration="1000">
                 <li class="nav-desktop__menu-item home-link">
                     <a href="index.html" class="nav-desktop__menu-link ">Home</a>
                 </li>
@@ -76,8 +77,8 @@
     <main>
         <div class="wrapper">
             <section class="offers-site">
-                <h1 class="section-title">Oferta</h1>
-                <div class="offers__body">
+                <h1 class="section-title"  data-aos="fade-right"  data-aos-duration="1000">Oferta</h1>
+                <div class="offers__body"  data-aos="fade-right"  data-aos-duration="1000">
                     <div class="offers__item">
                         <h3 class="offers__title">VIP</h3>
                         <p class="offers__price">1000$</p>
@@ -128,11 +129,10 @@
 
 
 
-    <script src="./dist/js/script.min.js"></script>
-
-    <footer class="footer">
+    
+    <footer class="footer" >
     <div class="wrapper">
-        <div class="footer__body">
+        <div class="footer__body" data-aos="fade-right"  data-aos-duration="1000">
             <div class="footer__logo">
                 <img src="./dist/img/icons/christmas-tree.svg" alt="" class="footer__logo-img"> <a href="index.html" class="footer__logo-text">
                     Forest
@@ -182,12 +182,15 @@
             </div>
         </div>
     </div>
-    <div class="footer__bottom">
-        <div class="wrapper">
-            <p class="footer__company-name">&copy; <span class="current-year"></span> Forest Group Company Ltd. </p>
+    <div class="footer__bottom" >
+        <div class="wrapper" >
+            <p class="footer__company-name" >&copy; <span class="current-year"></span> Forest Group Company Ltd. </p>
         </div>
     </div>
 </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./dist/js/aos-setup.min.js"></script>
+    <script src="./dist/js/script.min.js"></script>
 </body>
 
 </html>

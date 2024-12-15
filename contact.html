@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Forest Group</title>
+    <title>Kontakt | Forest Group</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="./dist/css/style.min.css">
 
 </head>
@@ -25,12 +26,12 @@
 <nav class="nav-desktop">
     <div class="wrapper nav-wrapper">
         <div class="nav-body">
-            <div class="nav-desktop__logo">
+            <div class="nav-desktop__logo" data-aos="fade-right" data-aos-duration="1000">
                 <img src="./dist/img/icons/christmas-tree.svg" alt=""> <a href="index.html">
                     Forest
                 </a>
             </div>
-            <ul class="nav-desktop__menu">
+            <ul class="nav-desktop__menu" data-aos="fade-right" data-aos-duration="1000">
                 <li class="nav-desktop__menu-item home-link">
                     <a href="index.html" class="nav-desktop__menu-link ">Home</a>
                 </li>
@@ -75,8 +76,8 @@
     <main>
         <section class="contact">
             <div class="wrapper">
-                <h1 class="section-title">Kontakt</h1>
-                <div class="contact__all">
+                <h1 class="section-title"  data-aos="fade-right"  data-aos-duration="1000">Kontakt</h1>
+                <div class="contact__all"  data-aos="fade-right"  data-aos-duration="1000">
                     <div class="contact__form">
                         <h2 class="contact__form-title">Skontaktuj się z nami!</h2>
                         <div class="contact__double">
@@ -90,14 +91,18 @@
                             </div>
                         </div>
                         <div class="contact__form-item">
-                            <label for="message">Temat</label>
-                            <input type="text" placeholder="Temat">
+                            <label for="title">Temat</label>
+                            <input type="text" placeholder="Temat" id="title">
                         </div>
                         <div class="contact__form-item contact__form-item--textarea">
                             <label for="message">Wiadomość</label>
                             <textarea name="message" id="message" cols="30" rows="10"
                                 placeholder="Wiadomość"></textarea>
                         </div>
+                        <div class="contact__form-btn-box">
+                            <button class="contact__form-btn">Wyślij</button>
+                        </div>
+
                     </div>
 
                     <div class="contact__map"><iframe
@@ -105,14 +110,49 @@
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                 </div>
+                <div class="contact__icons"  data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="contact__icons-item">
+                        <div class="contact__icons-icon">
+                            <img src="./dist/img/icons/phone.svg" alt="phone">
+                        </div>
+                        <div class="contact__icons-text">
+                            <p>+48 123 456 789</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__icons-item">
+                        <div class="contact__icons-icon">
+                            <img src="./dist/img/icons/mail.svg" alt="phone">
+                        </div>
+                        <div class="contact__icons-text">
+                            <p>kontakt@forestgroup.pl</p>
+                        </div>
+                    </div>
+                    <div class="contact__icons-item">
+                        <div class="contact__icons-icon">
+                            <img src="./dist/img/icons/home.svg" alt="phone">
+                        </div>
+                        <div class="contact__icons-text">
+                            <p>ul. Jasnogórska 2, Kraków</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup">
+                <div class="popup__content">
+                    <h3 class="popup__title">Dziękujemy za wysłanie wiadomości!</h3>
+                    <p class="popup__text">Odpowiemy tak szybko jak to możliwe.</p>
+                    <button class="popup__btn">Zamknij</button>
+                </div>
             </div>
         </section>
 
 
     </main>
-    <footer class="footer">
+    <footer class="footer" >
     <div class="wrapper">
-        <div class="footer__body">
+        <div class="footer__body" data-aos="fade-right"  data-aos-duration="1000">
             <div class="footer__logo">
                 <img src="./dist/img/icons/christmas-tree.svg" alt="" class="footer__logo-img"> <a href="index.html" class="footer__logo-text">
                     Forest
@@ -162,13 +202,16 @@
             </div>
         </div>
     </div>
-    <div class="footer__bottom">
-        <div class="wrapper">
-            <p class="footer__company-name">&copy; <span class="current-year"></span> Forest Group Company Ltd. </p>
+    <div class="footer__bottom" >
+        <div class="wrapper" >
+            <p class="footer__company-name" >&copy; <span class="current-year"></span> Forest Group Company Ltd. </p>
         </div>
     </div>
 </footer>
+    <script src="./dist/js/contact.min.js"></script>
     <script src="./dist/js/script.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./dist/js/aos-setup.min.js"></script>
 </body>
 
 </html>

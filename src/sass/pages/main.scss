@@ -126,8 +126,12 @@
 		height: 500px;
 		margin: 3rem 0;
 		width: 80%;
+		transition: transform 0.3s;
 
 		box-shadow: -1px 2px 14px 20px rgba(0, 0, 0, 0.1);
+		&:hover{
+			transform: scale(1.10);
+		}
 	}
 	&__title {
 		font-size: 1.8rem;
@@ -169,11 +173,16 @@
 		box-shadow: 1px 7px 10px 7px rgba(0, 0, 0, 0.1);
 		background-color: c.$color-primary;
 		color: c.$color-secondary;
+		transition: transform 0.3s;
 		cursor: pointer;
 
 		&--green {
 			background-color: c.$green-btn;
 			box-shadow: 1px 7px 10px 7px rgba(9, 255, 0, 0.1);
+		}
+
+		&:hover{
+			transform: scale(1.05);
 		}
 	}
 

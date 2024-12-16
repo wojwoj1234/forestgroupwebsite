@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as c;
 .footer {
 	background-color: c.$footer-bg-color;
+	z-index: 100;
 	&__body {
 		display: flex;
 		justify-content: center;
